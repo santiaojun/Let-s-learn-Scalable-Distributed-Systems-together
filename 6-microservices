@@ -1,0 +1,65 @@
+Lecture 6 microservices
+Alright, let’s talk microservices — this is one of those terms that sounds fancy but the core idea is actually pretty intuitive once you picture it.
+🌱 Big picture first (intuition)
+Imagine you’re building Amazon.
+Two ways:
+🧱 Monolith (old style)
+Everything in ONE giant app:
+login
+payment
+search
+recommendation
+order system
+All in one codebase, one deployment.
+👉 Like one giant bowl of spaghetti
+Change one noodle → everything shakes 😅
+🧩 Microservices (modern style)
+Split system into many small services:
+auth service
+payment service
+product service
+search service
+recommendation service
+Each runs independently and talks through APIs.
+👉 Like LEGO blocks
+Swap one piece → others don’t break.
+
+
+One giant app.
+
+If only search gets heavy traffic…
+
+👉 you still must scale the entire system
+
+So you add:
+
+5 → 10 → 20 full copies of EVERYTHING
+
+
+Even parts nobody uses (like admin panel).
+
+💸 wasteful + expensive
+
+🧩 Microservices scaling
+
+Now split into:
+
+search service
+
+payment service
+
+user service
+
+recommendation service
+
+If search is hot:
+
+👉 scale ONLY search
+
+search: 20 instances
+payment: 2 instances
+user: 3 instances
+
+
+🔥 Much cheaper + faster + smarter
+
